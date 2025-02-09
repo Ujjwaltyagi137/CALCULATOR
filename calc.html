@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      body {
+        background-color: black;
+        color: white;
+        justify-content: center;
+        align-items: center;
+      }
+      .sideleft {
+        height: 100vh;
+        width: 50%;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+      }
+      .sideright {
+        width: 50%;
+        font-size: 26px;
+        font-family:sans-serif;
+        background-color: #0093E9;
+        background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        position: relative;
+        display: inline;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        text-decoration: wavy;
+       
+    }
+      .set {
+        display: flex;
+        text-align: center;
+      }
+      .class1 {
+        width: 312px;
+        height: 484px;
+        border: 2px solid white;
+        position: relative;
+        top: 60px;
+        left: 190px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        
+      }
+      .head {
+        width: 413px;
+        height: 60px;
+        border: 2px solid black;
+        color: aliceblue;
+        font-size: 15px;
+      }
+      .part1 {
+        width: 100px;
+        height: 80px;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 60px;
+      }
+      .part2 {
+        width: 74px;
+        height: 80px;
+        border: 2px solid black;
+        text-align: center;
+        font-size: 60px;
+      }
+      .part1:hover{
+        color: black;
+        background-color: white;
+      }
+      .part2:hover{
+        color: black;
+        background-color: white;
+      }
+      button{
+        width: 85px;
+        height: 50px;
+        background-color: #0093E9;
+        font-size: 40px;
+      }
+      .lower{
+        width: 70px;
+        height: 50px;
+      }
+      .head{
+        font-size: 35px;
+        text-align: right;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="set">
+      <div class="sideright">
+        A calculator is a device that performs arithmetic operations on numbers.
+        Basic calculators can do only addition, subtraction, multiplication and
+        division mathematical calculations. However, more sophisticated
+        calculators can handle exponential operations, square roots, logarithms,
+        trigonometric functions and hyperbolic functions. Internally, some
+        calculators perform all these functions by repeated addition processes
+        A calculator is a device that performs arithmetic operations on numbers.
+        Basic calculators can do only addition, subtraction, multiplication and
+        division mathematical calculations. However, more sophisticated
+        calculators can handle exponential operations, square roots, logarithms,
+        trigonometric functions and hyperbolic functions. Internally, some
+        calculators perform all these functions by repeated addition processes
+      </div>
+      <div class="sideleft">
+        <div class="class1">
+          <div class="head" id="head"></div>
+          <div class="part1"><button id="one" class="upper">1</button></div>
+          <div class="part1"><button id="two" class="upper">2</button></div>
+          <div class="part1"><button id="three" class="upper">3</button></div>
+          <div class="part1"><button id="four" class="upper">4</button></div>
+          <div class="part1"><button id="five" class="upper">5</button></div>
+          <div class="part1"><button id="six" class="upper">6</button></div>
+          <div class="part1"><button id="seven" class="upper">7</button></div>
+          <div class="part1"><button id="eight" class="upper">8</button></div>
+          <div class="part1"><button id="nine" class="upper">9</button></div>
+          <div class="part1"><button id="multi" class="upper">*</button></div>
+          <div class="part1"><button id="zero" class="upper">0</button></div>
+          <div class="part1"><button id="clear" class="upper">AC</button></div>
+          <div class="part2"><button id="plus" class="lower">+</button></div>
+          <div class="part2"><button id="minus" class="lower">-</button></div>
+          <div class="part2"><button id="divide" class="lower">/</button></div>
+          <div class="part2"><button id="equal" class="lower">=</button></div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+    const head = document.getElementById('head')
+    const butn1 = document.getElementById('one');
+    const butn2 = document.getElementById('two');
+    const butn3 = document.getElementById('three');
+    const butn4 = document.getElementById('four');
+    const butn5 = document.getElementById('five');
+    const butn6 = document.getElementById('six');
+    const butn7 = document.getElementById('seven');
+    const butn8 = document.getElementById('eight');
+    const butn9 = document.getElementById('nine');
+    const butn0 = document.getElementById('zero');
+    const plus = document.getElementById('plus');
+    const minus = document.getElementById('minus');
+    const divide = document.getElementById('divide');
+    const multi = document.getElementById('multi');
+    const equal = document.getElementById('equal');
+    const clr = document.getElementById('clear');
+
+    const funcn = document.getElementsByClassName('lower');
+
+    butn1.addEventListener('click',function(){
+      head.innerHTML += parseFloat('1');
+})
+butn2.addEventListener('click',function(){
+      head.innerHTML += parseFloat('2');
+})
+butn3.addEventListener('click',function(){
+      head.innerHTML += parseFloat('3');
+})
+butn4.addEventListener('click',function(){
+      head.innerHTML += parseFloat('4');
+})
+butn5.addEventListener('click',function(){
+      head.innerHTML += parseFloat('5');
+})
+butn6.addEventListener('click',function(){
+      head.innerHTML += parseFloat('6');
+})
+butn7.addEventListener('click',function(){
+      head.innerHTML += parseFloat('7');
+})
+butn8.addEventListener('click',function(){
+      head.innerHTML += parseFloat('8');
+})
+butn9.addEventListener('click',function(){
+      head.innerHTML += parseFloat('9');
+})
+butn0.addEventListener('click',function(){
+      head.innerHTML += parseFloat('0');
+})
+plus.addEventListener('click',function(){
+      head.innerHTML += ('+');
+})
+minus.addEventListener('click',function(){
+      head.innerHTML += ('-');
+})
+divide.addEventListener('click',function(){
+      head.innerHTML += ('/');
+})
+multi.addEventListener('click',function(){
+      head.innerHTML += ('*');
+})
+clr.addEventListener('click',function(){
+      head.textContent = '';
+})
+
+equal.addEventListener('click',function(){
+  head.textContent = eval(head.textContent);
+})
+
+
+   </script>
+</html>
